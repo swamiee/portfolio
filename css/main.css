@@ -1,0 +1,167 @@
+#wrap>section{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    outline: 1px #333 solid ;
+}
+/* 1번 메인 */
+#wrap>section:nth-child(1){
+    /* background-image:url("")no-repeat; */
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+#wrap>section:nth-child(1) h3{
+    font-family: 'Cafe24Ohsquareair';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+
+}
+
+#wrap>section:nth-child(1) p{
+    font-family: 'Pretendard-Regular';
+    position: absolute;
+    top:80%;
+    left: 75%;
+    color: #333;
+}
+
+/* 2번  */
+#wrap>section:nth-child(2){
+    display: flex;
+}
+#wrap section:nth-child(2) .left{
+    width: 30%;
+}
+
+#wrap section:nth-child(2) .right{
+    width: 70%;
+}
+/* 3번 */
+#wrap>section:nth-child(3){
+    display: flex;
+}
+#wrap section:nth-child(3) .left{
+    width: 30%;
+    outline: 1px #ccc solid;
+}
+
+#wrap section:nth-child(3) .right{
+    width: 70%;
+}
+#wrap .card{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 70%;
+}
+
+#wrap .card h1{
+    font-size: 24px;
+    color: rgb(253, 148, 148);
+}
+#wrap .card h2{
+    font-size: 13px;
+    color: #555;
+}
+#wrap .card h3{
+    font-size: 11px;
+    color: #333;
+}
+#wrap .card p{
+    font-size: 10px;
+    color: #999;
+}
+
+.bar{
+    width: 50%;
+    border-bottom: 1px #333 solid;
+    margin: 10px 0 5px 0;
+}
+
+.title{
+    width: 40%;
+    border-bottom: 1px #333 solid;
+    position:relative ;
+    top: 30px;
+    text-align: right;
+    color: rgb(253, 148, 148);
+}
+.title strong{
+    color: #333
+}
+.mokup{
+    width: 80%;
+    margin: 15vh 5% 15vh 15%;
+    height: 70vh;
+    background-image:url(../img/namecard1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* 4번 */
+
+#wrap>section:nth-child(4){
+    display: flex;
+    flex-direction: row-reverse
+}
+#wrap section:nth-child(4) .left{
+    width: 30%;
+    outline: 1px #ccc solid;
+}
+
+#wrap section:nth-child(4) .right{
+    width: 70%;
+}
+#wrap .card{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 70%;
+}
+
+#wrap .card h1{
+    font-size: 24px;
+    color: rgb(253, 148, 148);
+}
+#wrap .card h2{
+    font-size: 13px;
+    color: #555;
+}
+#wrap .card h3{
+    font-size: 11px;
+    color: #333;
+}
+#wrap .card p{
+    font-size: 10px;
+    color: #999;
+}
+
+.bar{
+    width: 50%;
+    border-bottom: 1px #333 solid;
+    margin: 10px 0 5px 0;
+}
+
+.title{
+    width: 40%;
+    border-bottom: 1px #333 solid;
+    position:relative ;
+    top: 30px;
+    text-align: right;
+    color: rgb(253, 148, 148);
+}
+.title strong{
+    color: #333
+}
+.mokup{
+    width: 80%;
+    margin: 15vh 5% 15vh 15%;
+    height: 70vh;
+    background-image:url(../img/namecard1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
