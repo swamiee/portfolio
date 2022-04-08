@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card_transition</title>
+
+    <style>
+        *{margin:0 auto; padding:0;}
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+        }
+        .card{
+            position: relative;
+            width: 320px;
+            height: 450px;
+            background: #333;
+            border-radius: 25px ;
+            overflow: hidden;
+        }
+        .card::before{
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            clip-path: circle(100px at 0% 0%);
+            background: #dea;
+            transition: .3s;
+        }
+
+        .card:hover::before{
+            background-color: #aaa;
+            clip-path: circle(150px at 5% 5%);
+        }
+        .card::after{
+            content:"Palisade";
+            position:  absolute;
+            top: 40%; left: -5%;
+            font-size:5rem;
+            color: rgba(255,255,255,.3);
+            font-family: Arial, Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            transform: rotate(-20deg);
+            opacity: .4;
+        }
+        .imgBox{
+            text-align: center;
+            padding-top: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .imgBox img{
+            width: 80%;
+        }
+        .contentBox{
+            text-align: center;
+            color: #eee;
+        }
+        .contentBox span{
+            display: inline-block;
+           
+        }
+        .contentBox h3{
+            padding-bottom: 15px; 
+            font-size: 23px;
+        }
+        .contentBox .engine span,
+        .contentBox .bodyType span,
+        .contentBox .drivingMethod span
+        { width: 60px; line-height: 20px;
+            font-size: 12px; 
+        }
+        .contentBox .trim span{
+            font-size:10px; width: 70px;
+
+        }
+        .contentBox .trim span:nth-child(1){
+            width: 60px; line-height:60px;
+            font-size: 12px;
+        }
+        .contentBox .color img{
+            width: 20px;
+        }
+        .contentBox .color {
+            padding-bottom: 20px;
+        }
+        .button{
+            display: block;
+            width: 100px;
+            border-radius: 10px;
+            background: #ccc;
+            color: #333;
+            line-height: 30px;
+            margin-top: 2   0px;
+        }
+        /* hover */
+        .card:hover h3{transform: translate(0);}
+        .card:hover .engine{transform: translate(0);}
+        .card:hover .bodyType{transform: translate(0);}
+        .card:hover .drivingMethod{transform: translate(0);}
+        .card:hover .trim{transform: translate(0);}
+        .card:hover .color{transform: translate(0);}
+        .card:hover .button{transform: translate(0);}
+
+        .card h3{transform: translateY(300px);transition: .3s;}
+        .card .engine{transform: translateY(300px);transition: .5s;}
+        .card .bodyType{transform: translateY(400px);transition: .7s;}
+        .card .drivingMethod{transform: translateY(500px);transition: .9s;}
+        .card .trim{transform: translateY(600px);transition: 1.1s;}
+        .card .color{transform: translateY(700px);transition: 1.3s;}
+        .card .button{transform: translateY(800px);transition: 1.5s;}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="imgBox">
+                <img src="https://www.hyundai.com/contents/repn-car/side-45/main-palisade-20my-45side.png" alt="">
+            </div>
+            <div class="contentBox">
+                <h3>Palisade</h3>
+                <div class="engine">
+                    <span>엔 진 : </span><span>디젤</span><span>가솔린</span>
+                </div>
+                <div class="bodyType">
+                    <span>바디타입 : </span><span>7인승</span><SPAN>8인승</SPAN>
+                </div>
+                <div class="drivingMethod">
+                    <span>구동방식 : </span><span>2WD</span><span>4WD</span>
+                </div>
+                <div class="trim">
+                    <span>트림 : </span><span>Exclusive </span><span>Prestige </span><span>Calligraphy</span>
+                </div>
+                <div class="color">
+                    <span><img src="https://www.hyundai.com/contents/vr360/LX03/exterior/W7B/colorchip-exterior.png" alt=""></span>
+                    <span><img src="https://www.hyundai.com/contents/vr360/LX03/exterior/P7V/colorchip-exterior.png" alt=""></span>
+                    <span><img src="https://www.hyundai.com/contents/vr360/LX03/exterior/RB5/colorchip-exterior.png" alt=""></span>
+                    <span><img src="https://www.hyundai.com/contents/vr360/LX03/exterior/UB7/colorchip-exterior.png" alt=""></span>
+                    <span><img src="https://www.hyundai.com/contents/vr360/LX03/exterior/WC9/colorchip-exterior.png" alt=""></span>
+                </div>
+                <a class="button" href="#none">Buy Now!</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
